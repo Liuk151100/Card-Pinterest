@@ -1,14 +1,21 @@
+body {
+    display: flex;
+    margin: 0;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .Card {
     position: relative;
-    border: 5px solid red;
     width: 200px;
     height: 300px;
     border-radius: 10px;
     overflow: hidden;
 }
 
-.Card img{
+.Card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -17,23 +24,41 @@
 
 .FooterButton {
     display: flex;
-    position: absolute;
-    bottom: 0;
-    left: 20px;
+    bottom: -10px;
+    height: 45px;
+    position: relative;
+    transition: 0.5s ease-in-out;
 }
 
-.CircleButton{
+.Card:hover .FooterButton {
+    transform: translateY(-60px);
+}
+
+.Card:hover .HeaderButton {
+    transform: translateY(50px);
+}
+
+.CircleButton {
     background-color: white;
     border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-top: 5px;
 }
 
-.HeaderButton{
+.CircleButton img {
+    width: 100%;
+    height: auto;
+}
+
+.HeaderButton {
     position: absolute;
-    top: 10px;
+    top: -40px;
     right: 20px;
+    transition: 0.5s ease-in-out;
 }
 
-.SaveButton{
+.SaveButton {
     background-color: red;
     color: white;
     border-radius: 10px;
@@ -42,4 +67,17 @@
     padding-left: 10px;
     padding-right: 10px;
     border: 0;
+}
+
+.LinkButton {
+    border-radius: 10px;
+    margin-right: 35px;
+    margin-left: 5px;
+    height: 30px;
+    margin-top: 5px;
+}
+
+
+#ShareButton {
+    margin-right: 20px;
 }
